@@ -1,22 +1,943 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="simulation, optimization, chemical engineering, research, chemical process" />
+    <meta
+      name="Research - R. Ahl Laamara"
+      content="Improving complex systems via optimization of black-box, simulated models."
+    />
+    <title>Research - R. Ahl Laamara</title>
+    <!-- ICONS -->
+    <link rel="apple-touch-icon" sizes="57x57" href="fig/icons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="fig/icons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="fig/icons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="fig/icons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="fig/icons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="fig/icons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="fig/icons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="fig/icons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="fig/icons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="fig/icons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="fig/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="fig/icons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="fig/icons/favicon-16x16.png">
+    <link rel="manifest" href="fig/icons//manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link href="https://www.w3schools.com/w3css/4/w3.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link type="text/css" rel="stylesheet" href="rules.css" />
+    <link rel="stylesheet" href="https://m.w3newbie.com/you-tube.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+    <!-- LaTeX Stuff -->
+    <link rel="stylesheet" type="text/css" href="http://latex.codecogs.com/css/equation-embed.css" />
+    <!--[if lte IE 7]>
+    <link rel="stylesheet" href="http://latex.codecogs.com/css/ie6.css" type="text/css"/>
+    <![endif]-->
+    <script type="text/javascript" src="http://latex.codecogs.com/js/eq_config.js" ></script>
+    <script type="text/javascript" src="http://latex.codecogs.com/js/eq_editor-lite-18.js" ></script>
+  </head>
+  <body>
+    <div id="top_sec">
+      <!-- NAVIGATION -->
+      <nav id="navbar" class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+          <!--<a href="#" class="navbar-brand"><img src="/fig/icons/android-icon-36x36.png" alt=""></a>
+          -->
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+          <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"><i class="fa fa-fw fa-home"></i> Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#about_me"><i class="fa fa-fw fa-university"></i> About me</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#Academic_Profile"><i class="fas fa-fw fa-bug"></i></i> Academic Profile</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#projects"><i class="fa fa-fw fa-laptop"></i> Research</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#Overview_Teaching"><i class="fa fa-fw fa-book"></i> Overview Teaching</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#Scientific_Activities"><i class="fas fa-fw fa-bug"></i> Scientific Activities</a>
+                </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#publications"><i class="fa fa-fw fa-book"></i> Publications</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contact_me"><i class="fa fa-fw fa-envelope"></i> Contact me</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- IMAGE SLIDER -->
+      <div id="slides" class="carousel slide container-fluid" data-ride="carousel">
+        <ul class="carousel-indicators">
+          <li data-target="#slides" data-slide-to="0" class="active"></li>
+          <li data-target="#slides" data-slide-to="1"></li>
+          <li data-target="#slides" data-slide-to="2"></li>
+          <li data-target="#slides" data-slide-to="3"></li>
+        </ul>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="fig/graphical_abstract_appEnergy2021.png" alt="Surrogate-based simulation optimization">
+            <div class="carousel-caption">
+              <h1 class="display-2"><span>Lax Operator and superspin chains</span></h1>
+              <h3><span>from 4D CS gauge theory</span></h3>
+              <a href="https://iopscience.iop.org/article/10.1088/1751-8121/ac9355/pdf?casa_token=89YFp60CvUUAAAAA:E4yTLWR1KY8EFwMZ0qTDjfalWshUD-vtP4zVVZokfVyVL5uXc87J_XimGIlEkFbWIpCUeZHKpB9i" target="_blank" class="btn btn-outline-dark btn-lg">Learn more!</button></a>
+              <a href="#contact_me"><button type="button" target="_blank" class="btn btn-primary btn-lg">Contact me!</button></a>
+            </div>
+            </div>
+            <div class="carousel-item">
+            <img src="fig/FIGURE1_new.png" alt="Quantum Teleportation">
+            <div class="carousel-caption">
+              <h1 class="display-2"><span>Controlled quantum teleportation</span></h1>
+              <h3><span>between discrete and continuous physical systems</span></h3>
+              <a href="https://arxiv.org/pdf/2209.02460.pdf" target="_blank" class="btn btn-outline-dark btn-lg">Learn more!</button></a>
+              <a href="#contact_me"><button type="button" target="_blank" class="btn btn-primary btn-lg">Contact me!</button></a>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="./fig/kk22.jpg" alt="...">
+            <div class="carousel-caption">
+              <h1 class="display-2"><span>Analytical techniques in single and multi-parameter quantum estimation theory</h1>
+              <h3><span>A focused review</span></h3>
+              <a href="https://arxiv.org/pdf/2204.14252.pdf" target="_blank"><button type="button" class="btn btn-outline-dark btn-lg">Learn more!</span></button></a>
+              <a href="#contact_me"><button type="button" target="_blank" class="btn btn-primary btn-lg">Contact me!</button></a>
+            </div> 
+               </div>
+          <div class="carousel-item">
+            <img src="fig/2.png" alt="Simulation Optimization">
+            <div class="carousel-caption">
+              <h1 class="display-2"><span>(V, Ti) co-doping effect on electronic and magnetic properties</span></h1>
+              <h3><span>of zb-AlAs</span></h3>
+              <a href="https://scholar.google.fr/scholar?hl=fr&as_sdt=0%2C5&q=%28V%2C+Ti%29+co-doping+effect+on+electronic+and+magnetic+properties+of+zb-AlAs&btnG=" target="_blank" class="btn btn-outline-dark btn-lg">Learn more!</button></a>
+              <a href="#contact_me"><button type="button" target="_blank" class="btn btn-primary btn-lg">Contact me!</button></a>
+            </div>
+            <!-- <img src="fig/pareto.png" alt="Multi-objective simulation optimization">
+            <div class="carousel-caption">
+              <h1 class="display-2"><span>Multi-objective Simulation Optimization</h1>
+              <h3><span>Finding trade-off solutions to competing objectives in black-box simulations.</span></h3>
+              <button type="button" target="_blank" class="btn btn-outline-dark btn-lg">Learn more!</span></button>
+              <a href="#contact_me"><button type="button" target="_blank" class="btn btn-primary btn-lg">Contact me!</button></a>
+            </div> -->
+          </div>
+        </div>
+      </div>
+      <!-- JUMBOTRON -->
+      <div id="jumbotron" class="container-fluid">
+        <div class="row align-items-center jumbotron">
+          <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9 col-xl-10">
+            <p class="lead">Millimeter Wave All-Around Antenna Based on Whispering Gallery Mode Dielectric Resonator for IoT-Based Applications</p>
+          </div>
+          <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 col-xl-2 text-center">
+            <a href="#projects"><button type="button" target="_blank" class="btn btn-outline-secondary btn-md">Learn more!</button></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 2-COLUMN SECTION - ABOUT ME -->
+    <div id="about_me">
+      <div class="container-fluid">
+        <div class="row welcome text-center">
+          <div class="col-12">
+            <h1 class="display-4">About me</h1>
+          </div>
+          <hr class="light-90">
+        </div>
+        <div class="row">
+          <div class="col-sm-4 text-center">
+            <img src="fig/Laamara.jpg" class="img-fluid img_profile" alt="Picture of Rachid Ahl Laamara"><strong> <br>Prof. Rachid Ahl Laamara</strong>
+          <br>CPM, Centre of Physics and Mathematics & Mohammed V University, Rabat, Morocco.</p>
+          </div>
+          <div class="col-sm-8">
+            <p class="lead">Thanks for stopping by! 
+               Ahl Laamara Rachid is Professor of physics at the Mohammed V University in Rabat, Morocco. He obtained his PhD degree in 2007 from the University of Mohammed V in Rabat, for a thesis entitled: gauge / gravity duality in the context of topological string theory. In2008hewas a Post-Doctoral fellow at the Centre for Theoretical Physics (CTP) at the British University in Egypt, In 2010 he was a educational director of the School of Management, Telecommunications and Computing– Rabat (Sup MTI), From 2012 to 2019 he is at the CRMEF-Fez-Meknes as a professor, and then directly joined the Department of Physics of the Faculty of Science of Rabat as a professor of theoretical physics. He has co-authored more than 80 papers in international journals. His research interests include mathematical physics, quantum computation and condensed matter physics. 
+              
+              If you are looking for a research collaboration, do not hesitate to contact me by clicking on the following button or by <a href="mailto:ahllaamara@gmail.com">email</a>.
+              If you are just browsing, please enjoy the content!
+              <br><br>
+              <a href="#contact_me"><button type="button" target="_blank" class="btn btn-outline-secondary btn-md">Contact me</button></a>
+            </p>
+            
+            <!--
+            <div class="col-12 social_1l align-items-center text-center">
+              <a href="https://scholar.google.fr/citations?hl=fr&pli=1&user=FyTXy-MAAAAJ" target="blank"><i class="ai ai-google-scholar-square"></i></a>
+              <a href="https://github.com/lf-santos" target="blank"><i class="fab fa-github"></i></a>
+              <a href="https://twitter.com/Lfsfr_" target="blank"><i class="fab fa-twitter"></i></a>
+              <a href="https://instagram.com/lucas.francisco.s" target="blank"><i class="fab fa-instagram"></i></a>
+              <a href="https://facebook.com/lfchico" target="blank"><i class="fab fa-facebook"></i></a>
+            </div>
+            -->
+          </div>
+        </div>
+        <!-- 2-COLUMN RESEARCH & EDUCATION SECTION -->
+        <div class="row ul-2col-lg">
+          <div class="col-lg-6">
+            <div class="li_title">
+              <h1 class="display-4 text-center">Education</h1>
+            </div>
+            <ul class="li-2col-lg">
+            <li>
+                2008: Postdoc at the Center for Theoretical Physics,<br /> British University in Egypt.
+              </li>
+              <li>
+                2007: PhD in High Energy Physics, Faculty of Sciences,<br /> Mohammed V University in Rabat.
+              </li>
+              <li>
+                2003: Diploma of Advanced Higher Studies "DESA" in High Energy Physics, Faculty of Sciences,
+                <br />Mohammed V University in Rabat.
+              </li>
+              <li>
+               2001: License in Physical Sciences, Option: ELECTRONICS, Faculty of Sciences, <br />Mohammed V University in Rabat.
+              </li>
+              <li>
+                1995: Baccalaureate in Experimental Sciences (Rabat Academy).
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-6">
+            <div class="li_title">
+              <h1 class="display-4 text-center">Research Interests</h1>
+            </div>
+My research activity has been aimed in different directions, but all of them pursuing the development of mathematics inspired on significant problems from Physics and Engineering; include the study of causal properties of space-times, quantum information technologies and their mathematical foundations, control theory and symmetry and foundations of quantum Field theories:
+            <ul class="li-2col-lg">
+              <li>High Energy Physics</li>
+              <li>Particle Physics</li>
+              <li>Mathematical Physics</li>
+              <li>Quantum Information Theory</li>
+              <li>Computational Physics</li>
+              <li>Simulation optimization</li>
+            </ul>
+          </div>
+        </div>
+        <!-- 3-COLUMN SECTION -->
+        <div class="col-lg-12">
+          <div class="li_title">
+            <h1 class="display-4 text-center">Skills</h1>
+          </div>
+          <div class="row text-center">
+              <div class="col-xs-12 col-sm-6 col-md-4">
+                <i class="fas fa-code"></i>
+                <h3>Programming</h3>
+                <p>Python, MATLAB, C++, LaTeX, HTML, Wolfram Mathematica.</p>
+              </div>
+              <div class="col-xs-12 col-sm-6 col-md-4">
+                <i class="fas fa-industry"></i>
+                <h3>Process Simulation</h3>
+                <p>Quantum Espresso, WIEN2k, AKAI-KKR.</p>
+              </div>
+              <div class="col-sm-12 col-md-4">
+                <i class="fas fa-language"></i>
+                <h3>Languages</h3>
+                <p>English, French and Arabic</p>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- FIXED BACKGROUND FIGRE 
+    <figure>
+      <div class="fixed-wrap">
+        <div id="fixed">
+          <img src="fig/graphical_abstract_appEnergy2021.png" alt="...">
+        </div>
+      </div>
+    </figure> -->
+
+    <!-- CODE 2-COLUMN -->
+    <div class="row ul-2col-lg">
+      <div class="container-fluid padding">
+        <div class="row welcome text-center">
+          <div class="col-12">
+            <h1 class="display-4">Academic Profile</h1>
+            You may learn more about my academic background and the many academic positions I have held:
+            <ul class="li-2col-lg">
+    <dd> <li>Since 2020: Coordinator of the Professional Bachelor degree of Medical Dosimetry, Mohammed V University, Faculty of Sciences of Rabat.</li><dd>
+    <dd> <li>Since 2020: Coordinator of the Master’s degree in Mathematical Physics, Mohammed V University, Faculty of Sciences of Rabat.</li><dd>
+    <dd> <li>Since 2020: Coordinator of the Electricity Module II (S3) of the SMA branch, Mohammed V University, Faculty of Sciences of Rabat.</li><dd>
+    <dd> <li>Since 2019: Coordinator of the Module of Lie Algebra (S2) of the Master’s degree in Mathematical Physics, Mohammed V University, Faculty of Sciences of Rabat.</li><dd>
+    <dd> <li>2017-2018: Coordinator of the “Complementary Training in Physics 3” Module, Physics-Chemistry Section of the Regional Center for Education and Training Professions (CRMEF) in Meknes.</li><dd>
+    <dd> <li>Since 2017: Coordinator of the Supersymmetry Module (S3) of the Master’s degree in Mathematical Physics, Mohammed V University, Faculty of Sciences of Rabat.</li><dd>
+   <dd> <li>2016-2017: Coordinator of the “Complementary Training in Physics 1” Module, Physics-Chemistry Section of the Regional Center for Education and Training (CRMEF) in Meknes.</li><dd>
+      </ul>
+          </div>
+          <div class="col-lg-6">
+          </span>
+          <div class="col-12 social text-center">
+            <a href="https://scholar.google.fr/citations?user=JybzwA8AAAAJ&hl=fr" target="blank" title="https://scholar.google.fr/citations?user=JybzwA8AAAAJ&hl=fr"><i class="fab fa-github"></i></a>
+            <a href="https://www.researchgate.net/profile/Rachid-Ahl-Laamara-2" target="blank" title="https://www.researchgate.net/profile/Rachid-Ahl-Laamara-2"><img src="./fig/readthedocs-icon.svg" alt="ReadTheDocs-icon"></a>
+            <a href="mailto:ahllaamara@gmail.com" target="blank" title="mailto:ahllaamara@gmail.com"><i class="fa fa-envelope"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+          
+    <!-- PROJECTS -->
+    <div id="projects">
+      <div class="container-fluid padding">
+        <div class="row welcome text-center">
+          <div class="col-12">
+            <h1 class="display-4">Research</h1>
+          </div>
+          <hr class="light-300">
+        </div>
+        <div>
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-2">
+            <div class="col d-flex justify-content-center">
+              <div class="card text-center h-100">
+                <a href="./lngProject.html"><img
+                  src="./fig/graphical_abstract_appEnergy2021.png"
+                  class="card-img"
+                  alt="..."
+                  width="360px"
+                  style="
+                  height: 200.25px;
+                  object-fit: contain
+                  "
+                /></a>
+                <div class="card-body">
+                  <h4 class="card-title">
+                    Lax operator and superspin chains from 4D CS gauge theory
+                  </h4>
+                  <p class="card-text">
+                         We study the properties of interacting line defects in the four-dimensional Chern Simons (CS) gauge theory with invariance given by the SL(m|n) super-group family. From this theory, we derive the oscillator realisation of the Lax operator for superspin chains with SL(m|n) symmetry. To this end, we investigate the holomorphic property of the bosonic Lax operator L and build a differential equation DL=0 solved by the Costello-Gaioto-Yagi realisation of L in the framework of the CS theory. We generalize this construction to the case of gauge super-groups, and develop a Dynkin super-diagram algorithm to deal with the decomposition of the Lie superalgebras. We obtain the generalisation of the Lax operator describing the interaction between the electric Wilson super-lines and the magnetic 't Hooft super-defects....
+                  </p>
+                  <a href="https://iopscience.iop.org/article/10.1088/1751-8121/ac9355/pdf?casa_token=89YFp60CvUUAAAAA:E4yTLWR1KY8EFwMZ0qTDjfalWshUD-vtP4zVVZokfVyVL5uXc87J_XimGIlEkFbWIpCUeZHKpB9i" class="btn btn-primary">Learn more!</a>
+                </div>
+              </div>
+            </div>
+            <div class="col d-flex justify-content-center">
+              <div class="card text-center h-100">
+                <a href="./lngProject.html"><img
+                  src="./fig/kk22.jpg"
+                  class="card-img"
+                  alt="..."
+                  style="height: 200.25px; object-fit: contain;"/></a>
+                <!--
+                <video loop autoplay controls
+                class="card-img"
+                alt="..."><source src="./fig/simOpt.mp4" type="video/mp4"></video>
+                -->
+                <div class="card-body">
+                  <h4 class="card-title">
+                  Analytical techniques in single and multi-parameter quantum estimation theory: A focused review
+                  </h4>
+                  <p class="card-text">
+                   As we enter the era of quantum technologies, quantum estimation theory provides an operationally motivating framework for determining high precision devices in modern technological applications. The aim of any estimation process is to extract information from an unknown parameter embedded in a physical system such as the estimation converges to the true value of the parameter. According to the Cramér-Rao inequality in mathematical statistics, the Fisher information in the case of single-parameter estimation procedures, and the Fisher information matrix in the case of multi-parameter estimation, are the key quantities representing the ultimate precision of the parameters specifying a given statistical model. In quantum estimation strategies, it is usually difficult to derive the analytical expressions of such quantities in a given quantum state. This review....
+                  </p>
+                  <a href="https://arxiv.org/pdf/2204.14252.pdf" class="btn btn-primary"
+                    >Learn more!</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col d-flex justify-content-center">
+              <div class="card text-center h-100">
+                <a href="./whenProject.html"><img src="./fig/FIGURE1_new.png" class="card-img" alt="..." 
+                  style="height: 200.25px; object-fit: contain;"/></a>
+                <div class="card-body">
+                  <h4 class="card-title">
+                  Controlled quantum teleportation between discrete and continuous physical systems
+                  </h4>
+                  <p class="card-text">
+                    Quantum teleportation of an unknown state basing on the interaction between discrete-valued states (DV) and continuous-valued states (CV) presented a particular challenge in quantum technologies. Here we consider the problem of controlled quantum teleportation of an amplitude-matched CV qubit, encoded by a coherent state of a varied phase as a superposition of the vacuum- and single-photon optical states among two distant partners Alice and Bob, with the consent of controller, Charlie. To achieve this task, we use an hybrid tripartite entangled state (interaction between the discrete and continuous variables states) as the quantum resource where the coherent part belongs to Alice, while the single-photon belongs to Bob and Charlie and the CV qubit is at the disposal of Alice. The discrete-continuous interaction is realized on highly transmissive beam-splitter. We have shown that.......
+                  </p>
+                  <a href="https://arxiv.org/pdf/2209.02460.pdf" class="btn btn-primary"
+                    >Learn more!</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col d-flex justify-content-center">
+              <div class="card text-center h-100">
+                <a href="#publications"><img src="./fig/2.png" class="card-img" alt="NIPS gif" 
+                  style="height: 200.25px; object-fit: contain;"/></a>
+                <div class="card-body">
+                  <h4 class="card-title">
+                    (V, Ti) co-doping effect on electronic and magnetic properties of zb-AlAs
+                  </h4>
+                  <p class="card-text">
+The ab initio study of electronic, magnetic properties and Curie temperature of AlAs doped by single and double impurities is investigated using LDA–KKR–CPA method. It is shown that the Al substituted by V and/or Ti induces a half-metallic character and ferromagnetism in the system for different concentrations except co-doping by x=y=0.035. The stability of magnetism between the ferromagnetic and DLM states as well as the mechanism of exchange interaction are discussed. The density of states are plotted in the energy diagram for different concentrations of dopants. The co-doping with (V, Ti) increases Curie temperature in AlAs with respect to single substituant. The finding of this work confirms that the new compounds have a great potential for spintronic devices.
+                  </p>
+                  <a href="https://scholar.google.fr/scholar?hl=fr&as_sdt=0%2C5&q=%28V%2C+Ti%29+co-doping+effect+on+electronic+and+magnetic+properties+of+zb-AlAs&btnG=" class="btn btn-primary"
+                    >Learn more!</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+     <!-- Overview Teaching -->
+    <div class="Overview_Teaching" id="Overview_Teaching">
+      <div class="container-fluid padding">
+        <div class="row welcome text-center">
+          <div class="col-12">
+            <h1 class="display-4">Overview Teaching</h1>
+          </div>
+          
+          <div class="large-3 columns text-center">
+          <p ><strong><h1 style="background-color:LightGray;">Courses</h1>
+</strong></p>
+<div class="container">
+<div class="modal-dialog modal-lg">
+<!-- Modal content-->
+<div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal">&times;</button>
+<h4 class="modal-title">Course Title: Supersymétrie à Quatre Dimensions
+et théories quantiques des champs conformes</h4>
+</div>
+<div class="modal-body">
+<embed src="workshop/Susy-Master PM.pdf" frameborder="0" width="100%" height="500px">
+
+<div class="modal-footer">
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+          <div class="large-1 columns text-center">
+<div class="container">
+<div class="modal-dialog modal-lg">
+<!-- Modal content-->
+<div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal">&times;</button>
+<h4 class="modal-title">Course Title: Electricité II: Cours et Exemples d'Application     </h4>
+</div>
+<div class="modal-body">
+<embed src="workshop/cours Electromagnetisme SMA complet 2022 vf.pdf" frameborder="0" width="100%" height="500px">
+
+<div class="modal-footer">
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+          <div class="large-1 columns text-center">
+<div class="container">
+<div class="modal-dialog modal-lg">
+<!-- Modal content-->
+<div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal">&times;</button>
+<h4 class="modal-title">Course Title: Algébre de Lie; g-modules, classification, système de racines et ses représentations</h4>
+</div>
+<div class="modal-body">
+<embed src="workshop/Algebre de Lie.pdf" frameborder="0" width="100%" height="500px">
+
+<div class="modal-footer">
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+<p ><strong><h1 style="background-color:LightGray;">Summer School Lectures</h1>
+</strong></p>
+    </div>
+        </div>
+      </div>
+    </div>
+           <div class="large-1 columns text-center">
+<div class="container">
+<div class="modal-dialog modal-lg">
+<!-- Modal content-->
+<div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal">&times;</button>
+<h4 class="modal-title">Course Title: Introduction aux algèbres de Lie et leurs présentations</h4>
+</div>
+<div class="modal-body">
+<embed src="workshop/MNQI_TALK3.pdf" frameborder="0" width="100%" height="500px">
+
+<div class="modal-footer">
+</div>
+ <div class="large-1 columns text-center">
+<div class="container">
+<div class="modal-dialog modal-lg">
+<!-- Modal content-->
+<div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal">&times;</button>
+<h4 class="modal-title">Course Title: Théories quantiques des champs conformes</h4>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>  
+<div class="modal-body">
+<embed src="workshop/présentation_TQC.pdf" frameborder="0" width="100%" height="500px">
+
+<div class="modal-footer">
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>   
+<div class="large-1 columns text-center">
+<div class="container">
+<div class="modal-dialog modal-lg">
+<!-- Modal content-->
+<div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal">&times;</button>
+<h4 class="modal-title">Course Title: Supersymétrie à Quatre Dimensions</h4>
+
+</div>  
+<div class="modal-body">
+<embed src="workshop/Présentation_Supersymétrie.pdf" frameborder="0" width="100%" height="500px">
+
+<div class="modal-footer">
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>  
+   
+    <!-- Overview Teaching -->
+    <div class="Scientific_Activities" id="Scientific_Activities">
+      <div class="container-fluid padding">
+        <div class="row welcome text-center">
+          <div class="col-12">
+            <h1 class="display-4">Scientific Activities</h1>
+            Activities for the general public, some talks, etc: 
+          </div>
+          </div>
+           
+ 
+ <br>
 <center>
-
-<img src="https://quanetwork.github.io/people/rabat/Rachid-Ahl-Laamara.jpg" alt="alternatetext">
-
-<head>
-  <title>Prof. Rachid Ahl Laamara</title>
-</head>
-
-<body>
-
-  <h1>Welcome to my personal page</h1>
-  <h2>Web Site Main Ingredients:</h2>
-
-  <p>Bio</p>
-  <p>Publications</p>
-  <p>Activities</p>
- <p>Courses</p>
-</body>
+<img width="1000" height="600" src="./fig/KKK.JPG" alt="" srcset="./fig/KKK.JPG" sizes="(max-width: 20px) 100vw, 20px">
 </center>
+
+<br>
+    
+    <!-- PUBLICATIONS -->
+    <div class="publications" id="publications">
+      <div class="container-fluid padding">
+        <div class="row welcome text-center">
+          <div class="col-12">
+            <h1 class="display-4">Selected Publications</h1>
+          </div>
+          <hr class="light-90">
+        </div>
+        <table id="publications_table" class="container-fluid">
+          <colgroup>
+            <col class="thirty" />
+            <col class="ten" />
+            <col class="ten" />
+          </colgroup>
+          <thead>
+            <tr>
+              <th>Title <i class="fa fa-fw fa-sort"></i></td>
+              <th>Citations <i class="fa fa-fw fa-sort"></i></td>
+              <th>Year <i class="fa fa-fw fa-sort"></i></td>
+            </tr>
+          </thead>
+          <tbody id="pub_tab_body">
+            <tr class="item">
+              <td class="pub_tab_col0">
+                <a
+                  href="https://www.sciencedirect.com/science/article/pii/S0375960119303585"
+                  target="_blank"
+                  >A comparative study of local quantum Fisher information and local quantum uncertainty in Heisenberg XY model</a
+                ><br>
+                <p>
+                  A. Slaoui, L. Bakmou, M. Daoud, R. Ahl Laamara
+                </p>
+                <p>
+                Physics Letters A 383 (2019), 2241-2247
+                </p>
+              </td>
+              <td class="pub_tab_col">
+                <a
+                  href="https://scholar.google.fr/scholar?oi=bibs&hl=fr&cites=6303794761713551911"
+                  target="_blank"
+                  >42</a
+                >
+              </td>
+              <td class="pub_tab_col">
+                <span>2019</span>
+              </td>
+            </tr>
+            
+            <tr class="item">
+              <td class="pub_tab_col0">
+                <a
+                  href="https://link.springer.com/article/10.1007/s11128-018-1942-6"
+                  target="_blank"
+                  >The dynamics of local quantum uncertainty and trace distance discord for two-qubit X states under decoherence: a comparative study</a
+                >
+                <p>A. Slaoui, M. Daoud, R. Ahl Laamara</p>
+                <p>Quantum Information Processing 17 (2018) 1-24</p>
+              </td>
+              <td class="pub_tab_col">
+                <a
+                  href="https://scholar.google.fr/scholar?oi=bibs&hl=fr&cites=7494087683906861943"
+                  target="_blank"
+                  >34</a
+                >
+              </td>
+              <td class="pub_tab_col">2018</td>
+            </tr>
+            <tr class="item">
+              <td class="pub_tab_col0">
+                <a
+                  href="https://www.sciencedirect.com/science/article/pii/S0375960112007268"
+                  target="_blank"
+                  >Geometric measure of pairwise quantum discord for superpositions of multipartite generalized coherent states</a
+                >
+                <p>M. Daoud and R. Ahl Laamara</p>
+                <p>Physics Letters A, 376 (2012) 2361-2371</p>
+              </td>
+              <td class="pub_tab_col">
+                <a
+                  href="https://scholar.google.com.br/scholar?cites=5354574090666046111&as_sdt=2005&sciodt=0,5&hl=en"
+                  target="_blank"
+                  >31</a
+                >                
+              </td>
+              <td class="pub_tab_col">
+                2012
+              </td>
+            </tr>
+            <tr class="item">
+              <td class="pub_tab_col0">
+                <a
+                  href="https://epjplus.epj.org/articles/epjplus/abs/2018/10/13360_2018_12211_Article/13360_2018_12211_Article.html"
+                  target="_blank"
+                  >Universal evolution of non-classical correlations due to collective spontaneous emission</a
+                >
+                <p>A. Slaoui, M.I Shaukat, M. Daoud and R. Ahl Laamara</p>
+                <p>The European Physical Journal Plus, 133 (2018) 413</p>
+              </td>
+              <td class="pub_tab_col">
+                <a
+                  href="https://scholar.google.fr/scholar?cites=4764158430101246429&as_sdt=2005&sciodt=0,5&hl=fr"
+                  target="_blank"
+                  >27</a
+                >
+              </td>
+              <td class="pub_tab_col">2018</td>
+            </tr>
+            <tr class="item">
+              <td class="pub_tab_col0">
+                <a
+                  href="https://www.sciencedirect.com/science/article/pii/S0550321304007321"
+                  target="_blank"
+                  >RG cascades in hyperbolic quiver gauge theories</a
+                >
+                <p>
+                R. Ahl Laamara, M.A.B Haddou, A Belhaj, L.B Drissi and E. H Saidi
+                </p>
+                <p>
+                Nuclear Physics B, 702 (2004) 163-188
+                </p>
+              </td>
+              <td class="pub_tab_col">
+                <a href="https://scholar.google.fr/scholar?cites=9388725128414016888&as_sdt=2005&sciodt=0,5&hl=fr">26</a>
+              </td>
+              <td class="pub_tab_col">
+                2004
+              </td>
+            </tr>
+            <tr class="item">
+              <td class="pub_tab_col0">
+                <a
+                  href="https://arxiv.org/pdf/1210.8313.pdf"
+                  target="_blank"
+                  >Quantum discord for multipartite coherent states interpolating between Werner and Greenberger-Horne-Zeilinger states</a
+                >
+                <p>M Daoud, R Ahl Laamara</p>
+                <p>International Journal of Quantum Information, 10 (2012) 1250060</p>
+              </td>
+              <td class="pub_tab_col"><a href="https://scholar.google.fr/scholar?cites=5274301091040171078&as_sdt=2005&sciodt=0,5&hl=fr">25</a></td>
+              <td class="pub_tab_col">2012</td>
+            </tr>
+            <tr class="item">
+              <td class="pub_tab_col0">
+                <a
+                  href="https://link.springer.com/article/10.1007/s11128-019-2282-x"
+                  target="_blank"
+                  >Quantum Fisher information matrix in Heisenberg XY model</a
+                >
+                <p>
+                  L Bakmou, A Slaoui, M Daoud and R Ahl Laamara
+                </p>
+                <p>
+                Quantum Information Processing 18 (2019) 1-20.
+                </p>
+              </td>
+              <td class="pub_tab_col"><a href="https://scholar.google.fr/scholar?cites=4934602851204959666&as_sdt=2005&sciodt=0,5&hl=fr">
+                17
+              </td>
+              <td class="pub_tab_col">
+                2019
+              </td>
+            </tr>
+            <tr class="item">
+              <td class="pub_tab_col0">
+                <a
+                  href="https://scholar.google.fr/citations?view_op=view_citation&hl=fr&user=JybzwA8AAAAJ&citft=1&email_for_op=abdallahsalaoui1992%40gmail.com&citation_for_view=JybzwA8AAAAJ:bFI3QPDXJZMC"
+                  target="_blank"
+                  >Entanglement versus Gaussian quantum discord in a double-cavity opto-mechanical system</a
+                >
+                <p>
+                  J El Qars, M Daoud, Ahl Laamara
+                </p>
+                <p>
+                  International Journal of Quantum Information 13 (2015), 1550041
+                </p>
+              </td>
+              <td class="pub_tab_col"><a href="https://scholar.google.fr/scholar?cites=15339945601778768300&as_sdt=2005&sciodt=0,5&hl=fr">
+                17
+              </td>
+              <td class="pub_tab_col">
+                2015
+              </td>
+            </tr>
+            <tr class="item">
+              <td class="pub_tab_col0">
+                <a
+                  href="https://www.sciencedirect.com/science/article/pii/S055032130700171X"
+                  target="_blank"
+                  >Black holes in type IIA string on Calabi–Yau threefolds with affine ADE geometries and q-deformed 2d quiver gauge theories</a
+                >
+                <p>
+                  RA Laamara, A Belhaj, LB Drissi and EH Saidi
+                </p>
+                <p>
+                  Nuclear Physics B 776 (2007) 287-326
+                </p>
+              </td>
+              <td class="pub_tab_col"><a href="https://scholar.google.fr/scholar?cites=4191150639480107141&as_sdt=2005&sciodt=0,5&hl=fr">
+                16
+              </td>
+              <td class="pub_tab_col">
+                2007
+              </td>
+            </tr>
+            <tr class="item">
+              <td class="pub_tab_col0">
+                <a
+                  href="https://scholar.google.fr/citations?view_op=view_citation&hl=fr&user=JybzwA8AAAAJ&citation_for_view=JybzwA8AAAAJ:hC7cP41nSMkC"
+                  target="_blank"
+                  >On local Calabi–Yau supermanifolds and their mirrors</a
+                >
+                <p>
+                  RA Laamara, A Belhaj, LB Drissi and EH Saidi
+                </p>
+                <p>
+                  Journal of Physics A: Mathematical and General 39 (2006), 5965
+                </p>
+              </td>
+              <td class="pub_tab_col"><a href="https://scholar.google.fr/scholar?cites=8831582106588523633&as_sdt=2005&sciodt=0,5&hl=fr">
+                16
+              </td>
+              <td class="pub_tab_col">
+                2006
+              </td>
+            </tr>
+            <tr class="item">
+              <td class="pub_tab_col0">
+                <a
+                  href="https://link.springer.com/article/10.1140/epjd/e2017-70606-0"
+                  target="_blank"
+                  >Dynamical Gaussian quantum steering in optomechanics</a
+                >
+                <p>
+                  J. El Qars, M. Daoud and R. Ahl Laamara
+                </p>
+                <p>The European Physical Journal D, 71 (2017), 1-10 </p>
+              </td>
+              <td class="pub_tab_col"><a href="https://scholar.google.fr/scholar?cites=8093417709651445516&as_sdt=2005&sciodt=0,5&hl=fr">
+              15</td>
+              <td class="pub_tab_col">2017</td>
+            </tr>
+            <tr class="item">
+              <td class="pub_tab_col0">
+                <a
+                  href="https://iopscience.iop.org/article/10.1088/1751-8113/46/39/395302/meta"
+                  target="_blank"
+                  >Multipartite quantum correlations in even and odd spin coherent states</a
+                >
+                <p>M. Daoud, R. Ahl Laamara and W. Kaydi</p>
+                <p>Journal of Physics A: Mathematical and Theoretical 46 (2013), 395302</p>
+              </td>
+              <td class="pub_tab_col"><a href="https://scholar.google.fr/scholar?cites=11634290812781780020&as_sdt=2005&sciodt=0,5&hl=fr">
+              14</td>
+              <td class="pub_tab_col">2013</td>
+            </tr>
+            <tr class="item">
+              <td class="pub_tab_col0">
+                <a
+                  href="https://link.springer.com/article/10.1007/s10948-019-05397-x"
+                  target="_blank"
+                  >Enhanced electronic and magnetic properties of Cr-and Mn-Doped GeC zinc blende</a
+                >
+                <p>N Mediane, F Goumrhar, LB Drissi, K Htoutou and R. Ahl Laamara</p>
+                <p>Journal of Superconductivity and Novel Magnetism 33 (8), 2513-2520</p>
+              </td>
+              <td class="pub_tab_col"><a href="https://scholar.google.fr/scholar?cites=7442623056963651865&as_sdt=2005&sciodt=0,5&hl=fr">
+              13</td>
+              <td class="pub_tab_col">2020
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      
+ 
+          
+    <!-- CONTACT US 
+    <div id="contact">
+      <div class="container-fluid padding">
+        <div class="row text-center padding">
+          <div class="row welcome text-center">
+            <div class="col-12">
+              <h1 class="display-4">Contact me!</h1>
+            </div>
+            <hr>
+          </div>
+        </div>
+      </div>
+    </div>-->
+
+    <!--  FOOTER  -->
+    <footer>
+      <div id="contact_me" class="container-fluid">
+        <div class="row text-center">
+          <div class="col-md-4" style="padding-bottom: 0;">
+            <!--
+            <p>+(212)634706574</p>
+            <p>ahllaamara@gmail.com</p>
+            <p>Rabat, Morocco.</p>
+            -->
+            <p>
+              <!-- Faculté des Sciences de Rabat -->
+              <!-- <iframe src="https://www.google.com/maps/d/u/0/viewer?hl=en_US&mid=1OAb3lL1jXOy3zvfwY0diQ9gKHXI&ll=34.007277000000016%2C-6.838753000000006&z=17"  -->
+              <!-- ETH -->
+              <iframe src="https://www.google.com/maps/d/u/0/viewer?hl=en_US&mid=1OAb3lL1jXOy3zvfwY0diQ9gKHXI&ll=34.007277000000016%2C-6.838753000000006&z=17" 
+                width="300" height="200" 
+                style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </p>
+          </div>
+          <div class="col-md-8" style="padding-bottom: 0;">
+            <hr class="light-90" style="border-color: antiquewhite;">
+            <h5>Contact me</h5>
+            <hr class="light-90" style="border-color: antiquewhite">
+            <div class="col-12 social padding">
+              <!--<a href="https://facebook.com/lfchico" target="blank"><i class="fab fa-facebook"></i></a>
+              <a href="https://instagram.com/lucas.francisco.s" target="blank"><i class="fab fa-instagram"></i></a>-->
+              <a href="https://www.researchgate.net/profile/Rachid-Ahl-Laamara-2" target="blank"><i class="ai ai-google-scholar-square"></i></a>
+              <a href="https://scholar.google.fr/citations?user=JybzwA8AAAAJ&hl=fr" target="blank"><i class="fab fa-github"></i></a>
+              <a href="https://www.youtube.com/channel/UCU732_OVHeu7Ks3xD4bx9uQ" target="blank"><i class="fab fa-youtube"></i></a>
+              <a href="https://twitter.com/um5rabat" target="blank"><i class="fab fa-twitter"></i></a>
+              <a href="mailto:ahllaamara@gmail.com"><i class="fa fa-envelope"></i></a>
+            </div>
+            <!--
+            <a  aria-current="page" href="#"><p><i class="fa fa-fw fa-home"></i> Home</p></a>
+            <a  href="#section_projects"><p><i class="fa fa-fw fa-laptop"></i> Projects</p></a>
+            <a  href="#section_publications"><p><i class="fa fa-fw fa-book"></i> Publications</p></a>
+            <a  href="mailto:ahllaamara@gmail.com"><p><i class="fa fa-fw fa-envelope"></i> Contact me</p></a>
+            -->
+          </div>
+          <div class="col-12" style="padding-bottom: 0;">
+            <hr class="light-100" style="border-color: antiquewhite;">
+            <p>&copy; Rachid AHL LAAMARA</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-arrow-up"></i></button>
+    <script>
+      //Get the button
+      var mybutton = document.getElementById("myBtn");
+      
+      // When the user scrolls down 20px from the top of the document, show the button
+      window.onscroll = function() {scrollFunction()};
+      
+      function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          mybutton.style.display = "block";
+        } else {
+          mybutton.style.display = "none";
+        }
+      }
+      
+      // When the user clicks on the button, scroll to the top of the document
+      function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+      </script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      let tid = "#publications_table";
+      let headers = document.querySelectorAll(tid + " th");
+      
+      // Sort the table element when clicking on the table headers
+      headers.forEach(function(element, i) {
+        element.addEventListener("click", function() {
+          w3.sortHTML(tid, ".item", "td:nth-child(" + (i + 1) + ")");
+        });
+      });
+    </script>
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <script>
+      // Navbar colapse after click
+        $('.navbar-collapse a').click(function(){
+            $(".navbar-collapse").collapse('hide');
+        });
+    </script>
+  </body>
 </html>
